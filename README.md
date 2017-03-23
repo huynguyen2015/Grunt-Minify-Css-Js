@@ -16,51 +16,51 @@ B1: Create structure folder: <br/>
 
 B2: copy following code to package.json:						<br/>
 {																<br/>
-&#09;	"name": "DEMO",												<br/>
-&#09;	"version": "0.0.1",											<br/>
-&#09;	"description": "Demo Minify CSS - JS",						<br/>
-&#09;	"main": "Gruntfile.js",										<br/>
-&#09;	"author": "The Author",										<br/>
-&#09;	"license": "GPL",											<br/>
-&#09;	"devDependencies": {										<br/>
-&#09;&#09;		"grunt": "~0.4.1",										<br/>
-&#09;&#09;		"grunt-contrib-uglify": "~0.2.2",						<br/>
-&#09;&#09;		"grunt-contrib-cssmin": "~0.6.1",						<br/>
-&#09;&#09;		"grunt-contrib-concat": "~0.3.0"						<br/>
-&#09;	}															<br/>
+&emsp;	"name": "DEMO",												<br/>
+&emsp;	"version": "0.0.1",											<br/>
+&emsp;	"description": "Demo Minify CSS - JS",						<br/>
+&emsp;	"main": "Gruntfile.js",										<br/>
+&emsp;	"author": "The Author",										<br/>
+&emsp;	"license": "GPL",											<br/>
+&emsp;	"devDependencies": {										<br/>
+&emsp;&emsp;		"grunt": "~0.4.1",										<br/>
+&emsp;&emsp;		"grunt-contrib-uglify": "~0.2.2",						<br/>
+&emsp;&emsp;		"grunt-contrib-cssmin": "~0.6.1",						<br/>
+&emsp;&emsp;		"grunt-contrib-concat": "~0.3.0"						<br/>
+&emsp;	}															<br/>
 }																<br/>
 
 B3: copy the following code to Gruntfile.js:					<br/>
 module.exports = function(grunt) { 								<br/>
-&#09;	grunt.initConfig({ 											<br/>
-&#09;	concat: { 													<br/>
-&#09;&#09; 		gopcss: { 													<br/>
-&#09;&#09;&#09;			src: [ 													<br/>
-&#09;&#09;&#09;&#09;				'css/bootstrap.css',								<br/>
-&#09;&#09;&#09;&#09;				'css/style.css', 									<br/>
-&#09;&#09;&#09;			], 														<br/>
-&#09;&#09;&#09;			dest: 'css/all.css' 									<br/>
-&#09;&#09;		}, 															<br/>
-&#09;&#09;		gopjs: { 													<br/>
-&#09;&#09;			src: [ 													<br/> 
-&#09;&#09;&#09;				'js/jquery.js', 									<br/>
-&#09;&#09;&#09;				'js/myjs.js', 										<br/>
-&#09;&#09;			], 														<br/>
-&#09;&#09;			dest: 'js/all.js' 										<br/>
-&#09;&#09;		},	 														<br/>
-&#09;	}, 																<br/>
-&#09;	cssmin: { 														<br/>
-&#09;&#09;		nencss: { 													<br/>
-&#09;&#09;&#09;			src: 'css/all.css', 									<br/>
-&#09;&#09;&#09;			dest: 'css/all.min.css' 								<br/>
-&#09;&#09;		}, 															<br/>
-&#09;	 }, 															<br/>
-&#09;	 uglify: { 														<br/>
-&#09;&#09;		nenjs: { 													<br/>
-&#09;&#09;&#09;			src: 'js/all.js', 										<br/>
-&#09;&#09;&#09;			dest: 'js/all.min.js', 									<br/>
-&#09;&#09;		} 															<br/>
-&#09;	 } 																<br/>
+&emsp;	grunt.initConfig({ 											<br/>
+&emsp;	concat: { 													<br/>
+&emsp;&emsp; 		gopcss: { 													<br/>
+&emsp;&emsp;&emsp;			src: [ 													<br/>
+&emsp;&emsp;&emsp;&emsp;				'css/bootstrap.css',								<br/>
+&emsp;&emsp;&emsp;&emsp;				'css/style.css', 									<br/>
+&emsp;&emsp;&emsp;			], 														<br/>
+&emsp;&emsp;&emsp;			dest: 'css/all.css' 									<br/>
+&emsp;&emsp;		}, 															<br/>
+&emsp;&emsp;		gopjs: { 													<br/>
+&emsp;&emsp;			src: [ 													<br/> 
+&emsp;&emsp;&emsp;				'js/jquery.js', 									<br/>
+&emsp;&emsp;&emsp;				'js/myjs.js', 										<br/>
+&emsp;&emsp;			], 														<br/>
+&emsp;&emsp;			dest: 'js/all.js' 										<br/>
+&emsp;&emsp;		},	 														<br/>
+&emsp;	}, 																<br/>
+&emsp;	cssmin: { 														<br/>
+&emsp;&emsp;		nencss: { 													<br/>
+&emsp;&emsp;&emsp;			src: 'css/all.css', 									<br/>
+&emsp;&emsp;&emsp;			dest: 'css/all.min.css' 								<br/>
+&emsp;&emsp;		}, 															<br/>
+&emsp;	 }, 															<br/>
+&emsp;	 uglify: { 														<br/>
+&emsp;&emsp;		nenjs: { 													<br/>
+&emsp;&emsp;&emsp;			src: 'js/all.js', 										<br/>
+&emsp;&emsp;&emsp;			dest: 'js/all.min.js', 									<br/>
+&emsp;&emsp;		} 															<br/>
+&emsp;	 } 																<br/>
  }); 															<br/>
 grunt.loadNpmTasks('grunt-contrib-concat'); 					<br/>
 grunt.loadNpmTasks('grunt-contrib-cssmin'); 					<br/>
