@@ -1,5 +1,4 @@
-# Grunt-Minify-Css-Js
-Combine & Minify css &amp; js with Grunt &amp; npm
+﻿Hướng dẫn nén nhiều file css/js thành 1. Sau do minify file thành .min.js hay .min.css
 
 ** Prerequired install grunt with npm:
 npm install -g grunt-cli
