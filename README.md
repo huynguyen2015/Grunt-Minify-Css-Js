@@ -4,8 +4,8 @@ Combine & Minify css &amp; js with Grunt &amp; npm
 ** Prerequired install grunt with npm:
 npm install -g grunt-cli
 
-B1: Create structure folder:
--- 1. css
+B1: Create structure folder: <br/>
+-- 1. css <br/>
 ---- bootstrap.css
 ---- mystyle.css
 -- 2. js
